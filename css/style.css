@@ -1,1 +1,387 @@
- 
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=latin-ext');
+
+* {
+    /* do wymiarów poszczególnych elementów doliczane będą ich dopełnienia (padding) oraz obramowanie (border).  */
+  box-sizing:border-box; 
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #313332;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+[class*='col-'] { /* ===== Wybieramy wszystkie elementy, które w nazwie klasy col- ======= */
+  float: left;
+  Min-height: 1px;
+}
+
+.col-1 {width: 8.33%;}  /* =========== ustalenie wielkości w grindzie ============== */
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.col-offset-0 {margin-left: 0;}
+.col-offset-1 {margin-left: 8.33%;}
+.col-offset-2 {margin-left: 16.66%;}
+.col-offset-3 {margin-left: 25%;}
+.col-offset-4 {margin-left: 33.33%;}
+.col-offset-5 {margin-left: 41.66%;}
+.col-offset-6 {margin-left: 50%;}
+.col-offset-7 {margin-left: 58.33%;}
+.col-offset-8 {margin-left: 66.66%;}
+.col-offset-9 {margin-left: 75%;}
+.col-offset-10 {margin-left: 83.33%;}
+.col-offset-11 {margin-left: 91.66%;}
+
+em {
+  font-style: italic;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+section > .container {
+  margin: 50px auto;
+  text-align: center;
+  max-width: 960px;
+  line-height: 22px;
+}
+
+/* =========== HEADER ============== */
+
+header {
+  background-color: #313234;
+  height: 50px;
+  background-color: rgba(0 0 0 0.5)
+}
+
+header > nav img {
+  padding: 10px 0;
+}
+
+header > nav ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+header > nav ul > li {
+  display:inline-block;
+}
+
+header > nav ul > li > a {
+  line-height: 50px;
+  display: block;
+  color: #fff;
+  padding: 0 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header > nav ul > li > a:hover {
+  background: #ccc;
+}
+
+/* ======== HERO ============ */
+
+.hero {
+  background: url("../images/header_bg.jpg");
+  background-position-y: -200px;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0 auto;
+  height: 400px;
+}
+
+.slogan {
+  width: 600px;
+  height: 160px;
+  background-color: rgba(0, 0, 0, 0.4);
+  float: right;
+  color: #fff;
+  font-weight: bold;
+  font-size: 40px;
+  padding: 60px 50px;
+  margin-top: 100px;
+}
+
+/* ===================== BENEFITS ===========*/
+
+.benefits .left,
+.benefits .center,
+.benefits .right  {
+  padding: 0 30px;
+}
+
+.benefits h3 {
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 32px;
+}
+
+.benefits .fa {
+  background-color: #fff;
+  font-size: 45px;
+  border-radius: 30%;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #313332;
+  color: #fff;
+}
+
+.benefits a {
+  text-decoration: none;
+  color: #313332;
+}
+
+.benefits a .fa:hover {
+  background-color: #00c7e6;
+  transition: 0.4s; /*zwolnienie wyświetlania efektu*/
+}
+
+.benefits a:hover  {
+  color: #00c7e6;
+  transition: 0.4s;
+}
+
+.benefits a:hover .fa {
+  background-color: #00c7e6;
+  transition: 0.4s;
+}
+
+.works h2 {
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 45px;
+  text-transform: uppercase;
+}
+
+/*================= Gallery with icons ===================*/
+
+.gallery {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.gallery img {
+  width: calc(100vw/6);
+  display: block;
+}
+
+.gallery > .icons {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  line-height: calc(11vw);
+  opacity: 0;
+  color: #313332;
+  background-color: #fff;
+}
+
+.gallery > .icons:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.gallery > .icons> .fa {
+  font-size: calc(1.3vw);
+  text-align: center;
+  margin: 0 calc(1vw);
+}
+
+.gallery .fa {
+  background-color: white;
+  border-radius: 33%;
+  color: black;
+  padding: 5px;
+}
+
+
+/*================= TEAM ======================*/
+
+.pers-img .col-3 {   /* Kołko z obrazka */
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.team .shadow {           /* Nałożenie cienia na obrazek... */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;  /*...i ukrycie go.*/
+}
+
+.team .job {      /*Pozycja, rozmiar i kolor napisu.*/
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  left: calc(50% - 50px);
+  top: calc(50% - 17px);
+  color: #fff;
+  font-size: 20px; 
+  text-align: center;
+}
+
+.team .col-3:hover .shadow {
+  display: block;
+}
+
+.team > .pers-img {
+  margin-bottom: 15px;
+}
+
+.team > .pers-name {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+/*========================= ABOUT ==========================*/
+
+.about {
+  background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/DMYMPAX1GL.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 60px;
+}
+
+.about h2 {
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.about p {
+  font-size: 15px;
+  padding-top: 30px;
+  line-height: 20px;
+}
+
+.about .img-about {
+  text-align: center;
+}
+
+.about .img-about img {
+  width: 200px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  bottom: 0;
+  box-shadow: 3px 4px 15px #fff;
+}
+
+/*============================ NUMBERS =======================*/
+
+.us-numbers .numbers {
+  font-family: 'Lobster', cursive;
+  font-weight: 700;
+  font-size: 27px;
+}
+
+.us-numbers .ofthebeast {
+   margin: 10px 0;
+   color: #00c7e6;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+
+/* ================ FOOTER ==================*/
+
+footer {
+   background-color: #313332;
+   padding: 30px 0;
+}
+
+footer h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+footer p {
+  color: #fff;
+  margin-top: 20px;
+}
+
+.aubout-us {
+  padding-left: 0px;
+  padding-right: 20px;
+ }
+
+.getin {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.social {
+  padding-left: 20px;
+  padding-right: 0px;
+}
+
+.getin .g-left > p {
+  font-weight: 900;
+}
+
+.getin .g-right a {
+  color: white;
+  text-decoration: none;
+}
+
+.getin .g-right a:hover {
+  background-color: #00c7e6;
+}
+
+.social i {
+  font-size: 16px;
+  cursor: pointer;
+  background-color:  #00c7e6;
+  color: #fff;
+  padding: 4px;
+  border-radius: 3px;
+  margin: 20px 5px 0 0;
+}
+
+.social i:hover {
+  background-color: #FFF;
+  color: #313332;
+  transition: 0.3s;
+}
