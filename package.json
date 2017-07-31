@@ -1,0 +1,34 @@
+{
+  "name": "kuchnia1707",
+  "version": "1.0.0",
+  "description": "Projekt strony firmowej oferującej meble kuchenne",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krzysztofmarkowski/kuchnia1707.git"
+  },
+  "keywords": [
+    "meble",
+    "kuchnia",
+    "meble",
+    "kuchenne",
+    "strona",
+    "firmowa"
+  ],
+  "author": "Krzysztof Markowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krzysztofmarkowski/kuchnia1707/issues"
+  },
+  "homepage": "https://github.com/krzysztofmarkowski/kuchnia1707#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
